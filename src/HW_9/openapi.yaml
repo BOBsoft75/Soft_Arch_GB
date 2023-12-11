@@ -16,13 +16,13 @@ paths:
         "200":
           description: Успешный ответ со списком ресурсов
           content:
-            adplication/json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/Clouds"
         "default":
           description: Остальные ответы
           content:
-            adplication/json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/Error"
     post:
@@ -32,20 +32,20 @@ paths:
       operationId: CreateCloud
       requestBody:
         content:
-          adplication/json:
+          application/json:
             schema:
               $ref: "#/components/schemas/Error"
       responses:
         "200":
           description: Успешный заказ
           content:
-            adplication/json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/Clouds"
         "default":
           description: Все остальные ответы
           content:
-            adplication/json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /clouds/{cloud_id}:
@@ -66,17 +66,17 @@ paths:
         "200":
           description: Успешная отмена заказа по ID
           content:
-            adplication/json: {}
+            application/json: {}
         "404":
           description: Заказ не найден
           content:
-            adplication/json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/Error"
         "default":
           description: Все остальные ответы
           content:
-            adplication/json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/Error"
     get:
@@ -96,19 +96,19 @@ paths:
         "200":
           description: Успешный ответ с заказом
           content:
-            adplication/json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/Clouds"
         "404":
           description: Заказ не найден
           content:
-            adplication/json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/Error"
         "default":
           description: Остальные ответы
           content:
-            adplication/json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/Error"
 components:
